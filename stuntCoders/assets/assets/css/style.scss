@@ -1,0 +1,589 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+@mixin font{
+    font-family: 'Poppins', normal;
+}
+@mixin fontWeight400{
+    font-weight: 400;
+    @include font();
+}
+@mixin fontWeight500{
+    font-weight: 500;
+    @include font();
+}
+@mixin fontWeight600{
+    font-weight: 600;
+    @include font();
+}
+@mixin fontWeight700{
+    font-weight: 700;
+    @include font();
+}
+
+$whiteColor: #fff;
+$blackColor: #000;
+$menuTextColor: #4F5361;
+$buttonBackgroundColor: #0F1B4C;
+$h1TextColor: #000336;
+$upperH1TextColor: #687691;
+$underH1TextColor: #5A6473;
+$ratingTextColor: #7D8589;
+$starsColors: #FFCA56;
+$h2TextColor: #000339;
+$howToTextColor: #0689FF;
+$upperHowToTextColor: #3B3C45;
+$underPriceTextColor: #A3A6AB;
+$nextToSmallIconsTextColor: #4D4D52;
+$lightText: #A7A7A7;
+$buttonTextColor: #002366;
+$footerMenu: #1C1C1D;
+$footerLinks: #7A7A7E;
+$iconTextColor: #444444;
+$numbersDescColor: #7B8087;
+$featuredSectionColor: #063183;
+$featuredBtnColor: #002366;
+$socialColor: #646464;
+$copyrightColor: #c2c2c2;
+
+
+body{
+    margin-left: 165px;
+}
+
+.header{
+    display: flex;
+}
+
+#logoImg{
+    width: 107px;
+    height: 24px;
+    margin-top: 46px;
+}
+
+#menu{
+    margin-right: 20px;
+    margin-left: 65px;
+
+    ul{
+        list-style-type:none;
+        margin-top:47px;
+        li{
+            display:inline;
+            a{
+                text-decoration: none;
+                margin-right: 30px;
+                width: 42px;
+                height: 21px;
+                color: $menuTextColor;
+                font-size: 14px;
+                @include fontWeight500();
+
+               }
+            }
+        }
+   }
+   
+#login{
+    position: absolute;
+    width: 196px;
+    height: 40px;
+    right: 165px;
+    top: 38px;
+    display: block;
+    a{
+        text-decoration: none;
+        color: $buttonBackgroundColor();
+        @include fontWeight500();
+        margin-right: 18px;
+    }
+    .btn{
+        background-color: $buttonBackgroundColor();
+        color: $whiteColor();
+        border-radius: 8px;
+        padding: 9px 20px 10px 20px;
+        @include fontWeight500();
+        border-width: 0px;
+      } 
+}
+
+#wrapper{
+    display: flex;
+    #left{
+        width: 100%;
+        float: left;
+        margin-top: 138px;
+        #welcome{
+            color: $upperH1TextColor();
+            @include fontWeight500();
+        }
+        
+        #headline{
+            color: $h1TextColor();
+            @include fontWeight700();
+            font-size: 64px;
+        }
+        
+        #paragraph {
+            color: $underH1TextColor;
+            @include fontWeight400();
+            margin-top: 30px;
+        }
+        
+        .btnParagraph{
+            background-color: $buttonBackgroundColor();
+            color: $whiteColor();
+            border-radius: 12px;
+            @include fontWeight500();
+            margin-top: 40px;
+            padding: 15px 37px 15px 38px;
+            font-size: 13px;
+            border-width: 0px;
+        }
+    }
+    #right{
+        width: 100%;
+        height: auto;
+        #house{
+            float: right;
+            margin-right: 65px;
+            margin-top: 39px;
+            width: 584px;
+            height: 619px;
+        }
+    }
+}
+
+#wrapperRating{
+    display: flex;
+    flex-direction: column;
+    #ratingTop{
+        width: 100%;
+        margin-right: 165px;
+        #ratingLeft{
+            float: left;
+            margin-top: 122px;
+            .logoImgBottom{
+                width: 107px;
+                height: 24px;
+            }
+            #underLogoRatingText{
+                margin-top: 23px;
+                color: $ratingTextColor();
+                font-size: 16px;
+                @include fontWeight500();
+                line-height: 20px;
+            }
+        }
+        #ratingRight{
+            float: right;
+            color: $ratingTextColor();
+            font-size: 16px;
+            @include fontWeight500();
+            line-height: 20px;
+            margin-top: 129px;
+            margin-right: 165px;
+            #stars{
+                color: $starsColors();
+            }
+            #underStarRatingText{
+                margin-top: 14px;
+            }
+        }
+    }
+    #ratingBottom{
+        width: 100%;
+        #logos{
+            width: 80%;
+            display: flex;
+            margin-right: 175px;
+            margin-left: 10px;
+            margin-top: 74px;
+            .pic{
+                width: 160px;
+                margin-right: 88px;
+            }
+        }
+    }
+
+}
+
+#work{
+    
+    width: 100%;
+    margin-top: 160px;
+    padding-right: 120px;
+    #line{
+        width: 41px;
+        height: 4px;
+        margin: 0px auto;
+        background-color: $h2TextColor();
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+    
+    #workText{
+        @include fontWeight600();
+        color: $h2TextColor();
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #workParagraph{
+        @include fontWeight400();
+        color: #5A6473;
+        font-size: 16px;
+        width: 459px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    #howTo{
+        display: flex;
+        justify-content: center;
+        margin-left: 155px;
+        .howToSection{
+            margin-top: 65px;
+            margin-right: 160px;
+            .howToPic{
+                width: 40px;
+                height: 40px;
+                margin: 0px auto;
+                display: flex;
+                justify-content: center;
+            }
+            p{
+                color: $upperHowToTextColor();
+                font-size: 20px;
+                @include fontWeight500();
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: $howToTextColor();
+                font-size: 14px;
+                @include fontWeight600();
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+#btnWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    #btnHowTo {
+        background-color: $buttonBackgroundColor();
+        color: $whiteColor();
+        border-radius: 12px;
+        @include fontWeight500();
+        padding: 14px 25px 16px 24px;
+        font-size: 13px;
+        border-width: 0px;
+    }
+}
+#housesWrapper{
+    margin-top: 230px;
+    display: flex;   
+    flex-direction: column;     
+    #headlineSection{
+        width: 100%;
+        margin-bottom: 70px;
+        #headlineLeft{
+            float: left;
+            #propertiesTitle{
+                width: 351px;
+                @include fontWeight600();
+                color: $h2TextColor();
+                font-size: 35px;
+            }
+            #propertiesParagraph{
+                @include fontWeight400();
+                color: $underH1TextColor();
+                margin-top: 15px;
+            }
+        }
+        #headlineRight{
+            float: right;
+            margin-right: 165px;
+            margin-top: 65px;
+            #propertiesLink{
+                color: $howToTextColor();
+                @include fontWeight400();
+            }
+        }
+    }
+    #housesPictures{
+        display: flex;
+        justify-content: space-around;
+        margin-right: 165px;
+        .housesSection{
+            display: flex;
+            flex-direction: column;
+            #propertiesSpan1{
+                margin-left: 20px;
+                @include fontWeight600();
+                font-size: 20px;
+                color: $h2TextColor();
+                margin-bottom: 8px;
+            }
+            #propertiesSpan2{
+                margin-left: 20px;
+                @include fontWeight500();
+                font-size: 14px;
+                color: $underPriceTextColor();
+                margin-bottom: 23px;
+            }
+            .housesSectionPic{
+                width: 350px;
+                height: 227px;
+                margin-bottom: 20px;
+            }
+            .propertiserIconDiv{
+                display: flex;
+                margin-left: 20px;
+                .spanIcons{
+                    margin-right: 22px;
+                    display: flex;
+                    .iconClass{
+                        color: $howToTextColor();
+                    }
+                }
+                .packClass{
+                    margin-left: 8px;
+                    @include fontWeight500();
+                    font-size: 14px;
+                    color: $iconTextColor();
+                }
+            }
+        }
+    }
+}
+#neighborhoodWrapper{
+    display: flex; 
+    width: 100%;
+    margin-top: 260px;
+    margin-right: 250px;
+    #neighborhoodMainLeft{
+        position: relative;
+        float: left;
+        display: flex;
+        #neighborhoodLeft{
+            margin-left: 150px;
+            margin-right: 165px;
+            #housePic{
+                width: 400px;
+                height: 460px;
+            }
+        }
+        #neighborhoodAbsolute{
+            position: absolute;
+            left: 30px;
+            width: 239px;
+            height: 252px;
+            border-radius: 0px 0px 12px 12px;
+            background-color: $whiteColor();
+            #neighborhoodAbsoluteTitleWrapper{
+                margin-top: 45px;
+                margin-left: 23px;
+                margin-right: 23px;
+                display: flex;
+                justify-content: space-between;
+                #neighborhoodAbsoluteTitle{
+                    font-size: 26px;
+                    @include fontWeight700();
+                    color: $h2TextColor();
+                }
+                #neighborhoodIcon{
+                    width: 25px;
+                    height: 25px;
+                    margin-top: 10px;
+                }
+            }
+            #neighborhoodAbsoluteDesc{
+                margin-left: 23px;
+                margin-right: 23px;
+                @include fontWeight400();
+                font-size: 12px;
+                color: $lightText();
+            }
+            #usersPic{
+                margin-left: 15px;
+                margin-top: 50px;
+                margin-right: 30px;
+                width: 200px;
+                height: 80px;
+            }
+        }
+    }
+    #neighborhoodRight{
+        float: right;
+        margin-top: 75px;
+        margin-right: 250px;
+        #neighborhoodLine{
+            width: 41px;
+            height: 4px;
+            background-color: $h2TextColor();
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        #neighborhoodTitle{
+            color: $h2TextColor();
+            @include fontWeight600();
+            font-size: 35px;
+            width: 269px;
+            margin-top: 10px;
+        }
+        #neighborhoodDesc{
+            @include fontWeight400();
+            color: $underH1TextColor();
+            font-size: 16px;
+            width: 309px;
+            margin-top: 20px;
+        }
+    }
+}
+#numberWrapper{
+    display: flex;
+    margin-top: 110px;
+    margin-left: 95px;
+    margin-right: 195px;
+    justify-content: space-between;
+    .numbersSection{
+        .numbersSectionTitle{
+            @include fontWeight600();
+            color: $blackColor();
+            font-size: 64px;
+        }
+        .numbersSectionDesc{
+            @include fontWeight500();
+            color: $numbersDescColor();
+            font-size: 18px;
+        }
+    }
+}
+#featuredWrapperMain{
+    position: relative;
+    #featuredWrapper{
+        display: flex;
+        height: 409px;
+        background-color: $featuredSectionColor();
+        margin-right: 165px;
+        margin-top: 120px;
+        border-radius: 20px;
+        #featuredSection{
+            margin-left: 80px;
+            #featuredTitle{
+                font-size: 35px;
+                @include fontWeight600();
+                width: 350px;
+                color: $whiteColor();
+                margin-top: 130px;
+            }
+            #featuredDesc{
+                font-size: 16px;
+                width: 407px;
+                @include fontWeight400();
+                color: $whiteColor();
+                margin-top: 15px;
+            }
+            #featuredBtn{
+                background-color: $whiteColor();
+                color: $featuredBtnColor();
+                border-radius: 12px;
+                @include fontWeight500();
+                padding: 14px 22px 16px 22px;
+                font-size: 13px;
+                border-width: 0px;
+                margin-top: 20px;
+            }
+        }
+    }
+    #featuredPic{
+        position: absolute;
+        top: -30px;
+        right: 200px;
+        width: 550px;
+        height: 420px;
+        #homeStyle{
+            width: 600px;
+            height: 470px;
+        }
+    }
+}
+#footerWrapper{
+    display: flex;
+    margin-top: 105px;
+    margin-bottom: 105px;
+    .footerTitle{
+        display: flex;
+        @include fontWeight700();
+        font-size: 20px;
+        color: $footerMenu();
+        margin-bottom: 40px;
+    }
+    .footerDesc{
+        width: 130px;
+        display: flex;
+        @include fontWeight400();
+        font-size: 16px;
+        color: $lightText();
+        margin-bottom: 21px;
+    }
+    #footerLeft{
+        display: flex;
+        .footerSection{
+            margin-right: 165px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    #footerRight{
+        display: flex;
+        margin-right: 165px;
+        flex-direction: column;
+        .footerDesc{
+            width: 257px;
+        }
+        #social{
+            display: flex;
+            li{
+                list-style: none;
+                margin-right: 16px;
+            }
+            a{
+                text-decoration: none;
+                color: $socialColor();
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+#footerBottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 58px;
+    #footerBottomLeft{
+        float: left;
+           .logoImgBottom{
+            width: 107px;
+            height: 24px;
+        }
+    }
+    #footerBottomRight{
+        float: right;
+        margin-right: 165px;
+        #copyright{
+            color: $copyrightColor();
+            @include fontWeight400();
+            font-size: 14px;
+        }
+    }
+}
